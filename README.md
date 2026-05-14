@@ -76,10 +76,10 @@ Client-server chat applications are foundational to real-time communication over
 
 Cilent
 
-<img width="597" height="521" alt="image" src="https://github.com/user-attachments/assets/25043ac1-6e42-448d-9097-1e35e9ead54a" />
+<img width="616" height="530" alt="image" src="https://github.com/user-attachments/assets/6f067022-fde2-4ca4-957e-82f7c6653890" />
 
 Server  
-<img width="800" height="753" alt="image" src="https://github.com/user-attachments/assets/93479a05-bc3a-47d2-bf87-1b3f8a3d736e" />
+<img width="1055" height="791" alt="image" src="https://github.com/user-attachments/assets/a93f4577-bb7e-4bb5-8f48-9d4afe5433dc" />
 
 ## Result:
 <img width="1920" height="1080" alt="Screenshot (98)" src="https://github.com/user-attachments/assets/3923b150-fd04-4924-b564-c0099410cf67" />
