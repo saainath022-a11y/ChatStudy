@@ -72,7 +72,62 @@ User authentication mechanisms are essential to ensure secure and authorized acc
 Client-server chat applications are versatile tools that facilitate real-time communication between users over a network. They incorporate various components, including server-side and client-side elements, and must consider factors such as security, scalability, and concurrency. As technology continues to advance, client-server chat applications remain integral for collaborative communication in various domains.
 
 Client-server chat applications are foundational to real-time communication over networks. They incorporate principles of socket programming, communication protocols, and security mechanisms to provide a seamless user experience. Understanding the basics of client-server chat applications is essential for developers involved in networked application development, as they form the backbone of various collaborative communication systems. As technology evolves, chat applications continue to adapt, incorporating new features and technologies to enhance user interaction and connectivity.
+##Program
+Cilent
+import socket
 
+s = socket.socket()
+
+host = input("Enter hostname or host IP: ")
+port = 8080
+
+s.connect((host, port))
+print("Connected to chat server")
+
+while True:
+    incoming_message = s.recv(1024)
+    incoming_message = incoming_message.decode()
+    print("Server:", incoming_message)
+    print()
+
+    message = input(">> ")
+    message = message.encode()
+    s.send(message)
+    print("Sent")
+    print()
+Server 
+import socket
+
+s = socket.socket()
+
+host = socket.gethostname()
+port = 8080
+
+print("Server will start on host:", host)
+print()
+
+s.bind((host, port))
+
+print("Waiting for connection...")
+print()
+
+s.listen(1)
+
+conn, addr = s.accept()
+print(addr, "has connected to the server")
+print()
+
+while True:
+    message = input(">> ")
+    message = message.encode()
+    conn.send(message)
+    print("Sent")
+    print()
+
+    incoming_message = conn.recv(1024)
+    incoming_message = incoming_message.decode()
+    print("Client:", incoming_message)
+    print()
 
 ## Result:
 <img width="1920" height="1080" alt="Screenshot (98)" src="https://github.com/user-attachments/assets/3923b150-fd04-4924-b564-c0099410cf67" />
